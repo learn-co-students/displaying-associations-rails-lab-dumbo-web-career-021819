@@ -1,0 +1,16 @@
+<h1>Songs</h1>
+
+
+<% @artists.each do |artist|%>
+  <%= link_to artist.name , artist %>
+  <ul>
+    <% artist.songs.each do |song| %>
+    <li><%= link_to "#{song.artist.name} - #{song.title}", song %></li><p></p>
+    <% end %>
+  </ul>
+<% end %>
+
+
+Book.authors #array
+
+Book.authors.build(name: "AuthorName", birth_year: 1 )
